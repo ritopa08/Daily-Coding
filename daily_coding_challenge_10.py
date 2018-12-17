@@ -46,9 +46,12 @@ for i in range(0,len(s)):
 
 t=[]
 for i in range(len(q)):
-  v=q[i]      
-  f=set(v)    #Remove duplicate entries
-  h=len(f)    #length after removal of duplicates
+  v=q[i] 
+  #Remove duplicate entries
+  f=set(v)
+  #length after removal of duplicates
+  h=len(f) 
+  #actual length of the substring
   s=len(v)
   
   #checking conditions
