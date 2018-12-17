@@ -13,6 +13,8 @@ def mat(p,s):
   d=len(s)
   t=[]
   q=""
+  
+  #comparing each element in the string with the pattern
   for i in range (d):
     x=s[i]
     for k in range(m):
