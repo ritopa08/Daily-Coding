@@ -7,22 +7,33 @@ For example, given s = "abcba" and k = 2, the longest substring with k distinct 
 
 '''
 
+
+#import packages 
 from itertools import combinations,permutations
 
-
+#input
 s="abcba"
+k=2
+
+#initializes empty list
 l=[]
-    
+
+#generate all the possible combinatons
 for i in range(2,len(s)+1):
   x=list(combinations(s,i))
-  l.extend(x)
-#print(l)  
+  
+  #add to the list
+  l.extend(x) 
+ 
 
+ #converting list to string
 for i in range(len(l)):
   l[i]="".join(l[i])
-#print(l)  
+ 
 
 
+ 
+#generating all posible substring of the given string and stores in the list
 q=[]
 for i in range(0,len(s)):
   p=[]
@@ -31,15 +42,17 @@ for i in range(0,len(s)):
     x = x + s[j]
     p.append(x)
   q.extend(p)  
-#print(q)    
+   
 
 t=[]
 for i in range(len(q)):
-  v=q[i]
-  f=set(v)
-  h=len(f)
+  v=q[i]      
+  f=set(v)    #Remove duplicate entries
+  h=len(f)    #length after removal of duplicates
   s=len(v)
-  if(h==2 and s>2):
+  
+  #checking conditions
+  if(h==k and s>k):
     print(v)
           
 
