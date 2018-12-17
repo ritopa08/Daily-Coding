@@ -6,13 +6,24 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 
 '''
 
+
+#defining function
 def match_list(a,k):
+  
+  #initializes empty list
   l=[]
+  
+  #perform the multiplication opertions
   for i in range(k):
-    x=1
+    
+    #initializes x with 1
+    x=1         
     for j in range(k):
       if i!=j:
         x=x*a[j]
+        
+        
+    #add the result to the list    
     l.append(x)
 
   print(l)      
@@ -20,6 +31,9 @@ def match_list(a,k):
            
 
 
-a=[1, 2, 3, 4, 5]
-n=len(a)
+#Taking inputs    
+a=[1, 2, 3, 4, 5]   #array of elements
+n=len(a)            #size of the array
+
+#calling the function
 match_list(a,n)
